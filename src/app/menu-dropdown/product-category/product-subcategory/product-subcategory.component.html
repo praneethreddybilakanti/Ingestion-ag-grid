@@ -1,0 +1,14 @@
+<div class="container ">
+    <form class="custom-container">
+        <label>productsSubCategory Name  : </label>
+        <mat-form-field appearance="fill">
+            <mat-label>productsSubCategory</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="productsSubCategory">
+                <mat-option *ngFor="let productsSubCategory of productsSubCategories" [value]="productsSubCategory.name">
+                    {{productsSubCategory.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <app-product-subcategory></app-product-subcategory>
+</div>

@@ -1,0 +1,30 @@
+<div class="container ">
+    <div class="row custom-container">
+        <div class="col-md-5">
+            <form>
+                <label class="custom-label"> Product Category  :   </label>
+                <mat-form-field>
+                    <mat-label></mat-label>
+                    <mat-select [(ngModel)]="selectedValue" name="product" class="custom-selection">
+                        <mat-option *ngFor="let product of products" [value]="product.name">
+                            {{product.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <form>
+                <label class="custom-label"> Product sub Category   :   </label> &nbsp;
+                <mat-form-field>
+                    <mat-label></mat-label>
+                    <mat-select [(ngModel)]="selectedsubcategory" name="productsubcategory" class="custom-selection">
+                        <mat-option *ngFor="let productsubcategory of productSubCategories" [value]="productsubcategory.name">
+                            {{productsubcategory.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</div>
